@@ -7,6 +7,7 @@ use strict;
 my @smartcidr;
 $\ = $, = "\n";
 
+print '=' x 25 . 'BEFORE' . '=' x 25;
 while (<>)
 	{
 	my $cidr = cidrvalidate($_);
@@ -15,6 +16,6 @@ while (<>)
 	@smartcidr = Net::CIDR::cidradd($cidr, @smartcidr);
 	}
 
-print "=" x 50;
+print '=' x 25 . 'AFTER' . '=' x 25;
 
 print @smartcidr;

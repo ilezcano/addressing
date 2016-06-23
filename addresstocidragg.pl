@@ -9,7 +9,7 @@ $\ = $, = "\n";
 
 while (<>)
 	{
-	my @doop = split(' ',$_);
+	my @doop = split(/\s+/,$_);
 	my $cidr = addrandmask2cidr(@doop);
 	next unless $cidr;
 	print $cidr;

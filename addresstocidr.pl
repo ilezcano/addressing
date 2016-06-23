@@ -6,6 +6,6 @@ use strict;
 $\ = "\n";
 while (<>)
 	{
-	my @doop = split(' ',$_);
+	my @doop = split(/\s+/,$_);
 	print addrandmask2cidr(@doop);
 	}
