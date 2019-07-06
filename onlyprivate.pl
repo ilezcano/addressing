@@ -10,6 +10,7 @@ $\ = "\n";
 while (<>)
 	{
 	my $cidr = cidrvalidate($_);
+	next if /^0/;
 	next unless $cidr;
 	print $cidr if (Net::CIDR::cidrlookup($cidr, @privates));
 	}
